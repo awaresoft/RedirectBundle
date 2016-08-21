@@ -27,20 +27,23 @@
     <li>Always modify this library directly from your project. Vendor should be symlinked to <b>/src/Awaresoft</b> directory in your project.</li>
     <li>If you install this library before by Composer, you must remove this package from <b>/vendor</b> directory. After this operation got to: <b>/vendor/composer/autoload_psr4.php</b> file, find connection to this library and remove it from there.</li>
     <li>After that you can refresh your cache by: <b>app/console ca:cl</b> command.
-    <li>To commit new changes in library, use:</li>
+    <li>To commit new changes in library, use:
 <pre>
 git add .
 git commit -m "[message]"
 </pre>
-    <li>Add new tag, corresponding to naming convention of tags: Check if tag is available, before add new one:</li>
+</li>
+    <li>Add new tag, corresponding to naming convention of tags: Check if tag is available, before add new one:
 <pre>
 git tag [x.x.x]
 </pre>
-    <li>Push your changes:</li>
+</li>
+    <li>Push your changes:
 <pre>
 git push
 git push --tags
 </pre>
+</li>
     <li>Wait for update of vendors' libraries by Satis. You can check if new version is added on: <b>satis.awaresoft.pl</b>.</li>
     <li>Update composer repositories of your project by: <b>composer update</b> command.</li>
 </ul>
