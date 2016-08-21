@@ -36,12 +36,11 @@ git commit -m "[message]"
 <pre>
 git tag [x.x.x]
 </pre>
-    <li>Push your changes:
+    <li>Push your changes:</li>
 <pre>
 git push
 git push --tags
 </pre>
-</li>
     <li>Wait for update of vendors' libraries by Satis. You can check if new version is added on: <b>satis.awaresoft.pl</b>.</li>
     <li>Update composer repositories of your project by: <b>composer update</b> command.</li>
 </ul>
