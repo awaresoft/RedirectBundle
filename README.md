@@ -27,7 +27,7 @@
     <li>Always modify this library directly from your project. Vendor should be symlinked to <b>/src/Awaresoft</b> directory in your project.</li>
     <li>If you install this library before by Composer, you must remove this package from <b>/vendor</b> directory. After this operation got to: <b>/vendor/composer/autoload_psr4.php</b> file, find connection to this library and remove it from there.</li>
     <li>After that you can refresh your cache by: <b>app/console ca:cl</b> command.
-    <li>To commit new changes in library, use:
+    <li>To commit new changes in library, use:</li>
 <pre>
 git add .
 git commit -m "[message]"
