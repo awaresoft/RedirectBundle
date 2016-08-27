@@ -1,0 +1,23 @@
+services:
+    awaresoft.redirect.provider.factory:
+        class: Awaresoft\RedirectBundle\Provider\ProviderFactory
+        arguments:
+            - "@service_container"
+
+    awaresoft.redirect.provider.error:
+        class: Awaresoft\RedirectBundle\Provider\ErrorProvider
+        arguments:
+            - Awaresoft\RedirectBundle\Entity\Error
+            - "@service_container"
+
+    awaresoft.redirect.provider.url:
+        class: Awaresoft\RedirectBundle\Provider\UrlProvider
+        arguments:
+            - Awaresoft\RedirectBundle\Entity\Url
+            - "@service_container"
+
+    awaresoft.redirect.provider.domain:
+        class: Awaresoft\RedirectBundle\Provider\DomainProvider
+        arguments:
+            - Awaresoft\RedirectBundle\Entity\Domain
+            - "@service_container"
