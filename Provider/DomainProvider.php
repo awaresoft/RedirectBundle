@@ -51,7 +51,13 @@ class DomainProvider extends AbstractProvider
         /**
          * @var Domain $entity
          */
-        $locale = $this->siteSelector->retrieve()->getLocale();
+        $site = $this->siteSelector->retrieve();
+        $locale = null;
+
+        if ($site) {
+            $locale = $this->siteSelector->retrieve()->getLocale();
+        }
+
         $entity = $this->em->getRepository($this->class)->findByRequestUrl($request->getRequestUri(), $locale);
 
         if (!$entity) {

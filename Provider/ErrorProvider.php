@@ -44,7 +44,13 @@ class ErrorProvider extends AbstractProvider
         /**
          * @var Error $entity
          */
-        $locale = $this->siteSelector->retrieve()->getLocale();
+        $site = $this->siteSelector->retrieve();
+        $locale = null;
+
+        if ($site) {
+            $locale = $this->siteSelector->retrieve()->getLocale();
+        }
+
         $entity = $this->em->getRepository($this->class)->findByRequestUrl($request->getPathInfo(), $locale);
 
         if (!$entity) {
