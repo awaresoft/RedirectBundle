@@ -3,7 +3,6 @@
 namespace Awaresoft\RedirectBundle\Entity\Repository;
 
 use Doctrine\ORM\EntityRepository;
-use Doctrine\ORM\Query;
 use DoctrineExtensions\Query\SortableNullsWalker;
 
 /**
@@ -39,10 +38,6 @@ class UrlRepository extends EntityRepository
         }
 
         return $qb->getQuery()
-//            ->setHint(Query::HINT_CUSTOM_OUTPUT_WALKER, 'DoctrineExtensions\Query\SortableNullsWalker')
-//            ->setHint("sortableNulls.fields", [
-//                "u.createdAt" => SortableNullsWalker::NULLS_FIRST,
-//            ])
             ->getOneOrNullResult();
     }
 }
